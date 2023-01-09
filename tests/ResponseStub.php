@@ -2,6 +2,7 @@
 
 namespace Stefna\Cookie\Tests;
 
+use Nyholm\Psr7\Stream;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 
@@ -22,37 +23,37 @@ final class ResponseStub implements ResponseInterface
 
 	public function getProtocolVersion()
 	{
-		// TODO: Implement getProtocolVersion() method.
+		return '1.1';
 	}
 
 	public function withProtocolVersion($version)
 	{
-		// TODO: Implement withProtocolVersion() method.
+		return $this;
 	}
 
 	public function getHeaders()
 	{
-		// TODO: Implement getHeaders() method.
+		return [];
 	}
 
 	public function hasHeader($name)
 	{
-		// TODO: Implement hasHeader() method.
+		return true;
 	}
 
 	public function getHeader($name)
 	{
-		// TODO: Implement getHeader() method.
+		return [];
 	}
 
 	public function getHeaderLine($name)
 	{
-		// TODO: Implement getHeaderLine() method.
+		return '';
 	}
 
 	public function withHeader($name, $value)
 	{
-		// TODO: Implement withHeader() method.
+		return $this;
 	}
 
 	public function withAddedHeader($name, $value)
@@ -65,31 +66,31 @@ final class ResponseStub implements ResponseInterface
 
 	public function withoutHeader($name)
 	{
-		// TODO: Implement withoutHeader() method.
+		return $this;
 	}
 
 	public function getBody()
 	{
-		// TODO: Implement getBody() method.
+		return Stream::create('');
 	}
 
 	public function withBody(StreamInterface $body)
 	{
-		// TODO: Implement withBody() method.
+		return $this;
 	}
 
 	public function getStatusCode()
 	{
-		// TODO: Implement getStatusCode() method.
+		return 200;
 	}
 
 	public function withStatus($code, $reasonPhrase = '')
 	{
-		// TODO: Implement withStatus() method.
+		return $this;
 	}
 
 	public function getReasonPhrase()
 	{
-		// TODO: Implement getReasonPhrase() method.
+		return '';
 	}
 }

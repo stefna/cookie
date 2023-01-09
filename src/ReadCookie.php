@@ -64,6 +64,7 @@ final readonly class ReadCookie
 			$args['value'] = $this->value;
 		}
 
+		// @phpstan-ignore-next-line
 		return new Cookie(...$args);
 	}
 }

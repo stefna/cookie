@@ -56,7 +56,7 @@ final class CookieJarTest extends TestCase
 		$jar->remove('testRemove');
 
 		$cookie = $jar->get('testRemove');
-		$this->assertNotNull($cookie);
+		$this->assertInstanceOf(Cookie::class, $cookie);
 		$this->assertFalse($cookie->isSession());
 		$this->assertTrue($cookie->isExpired());
 	}

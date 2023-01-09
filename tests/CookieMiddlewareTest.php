@@ -26,6 +26,7 @@ final class CookieMiddlewareTest extends TestCase
 		]);
 		$middleware = new CookieMiddleware($manager);
 		$response = $middleware->process($request, $this->createRequestHandler(function (ServerRequestInterface $r) {
+			/** @var CookieJar $jar */
 			$jar = $r->getAttribute(CookieJar::class);
 			$this->assertTrue($jar->has('name'));
 			$jar->set(new Cookie('test', 'random'));
@@ -44,6 +45,9 @@ final class CookieMiddlewareTest extends TestCase
 		return new CookieManagerImpl(FrozenClock::fromString('2022-12-13 12:00:00'));
 	}
 
+	/**
+	 * @param array<string, string> $cookieParams
+	 */
 	private function createServerRequest(array $cookieParams = []): ServerRequestInterface
 	{
 		return (new ServerRequest('GET', '/'))->withCookieParams($cookieParams);
