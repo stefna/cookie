@@ -1,0 +1,25 @@
+{
+	"name": "stefna/cookie",
+	"type": "library",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Andreas Sundqvist",
+			"email": "andreas@stefna.is"
+		}
+	],
+	"require": {
+		"php": "^8.2",
+		"psr/log": "^3.0",
+		"psr/http-message": "^1.0.1",
+		"psr/http-server-middleware": "^1.0.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Stefna\\Cookie\\": "src/"
+		}
+	},
+	"description": ""
+}
