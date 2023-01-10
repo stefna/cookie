@@ -3,10 +3,6 @@
 namespace Stefna\Cookie;
 
 use DateInterval;
-use InvalidArgumentException;
-
-use function preg_match;
-use function sprintf;
 
 final readonly class ReadCookie
 {

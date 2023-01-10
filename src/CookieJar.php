@@ -5,7 +5,7 @@ namespace Stefna\Cookie;
 use Stefna\Collection\ScalarMap;
 
 /**
- * @extends \IteratorAggregate<array-key, Cookie>
+ * @extends \IteratorAggregate<array-key, Cookie|ReadCookie>
  */
 interface CookieJar extends ScalarMap, \IteratorAggregate
 {
