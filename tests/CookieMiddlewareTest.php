@@ -12,7 +12,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Stefna\Cookie\Cookie;
 use Stefna\Cookie\CookieJar;
 use Stefna\Cookie\CookieManager;
-use Stefna\Cookie\CookieManagerImpl;
+use Stefna\Cookie\HttpCookieManager;
 use Stefna\Cookie\CookieMiddleware;
 use Sunkan\Dictus\FrozenClock;
 
@@ -42,7 +42,7 @@ final class CookieMiddlewareTest extends TestCase
 	 */
 	public function getManager(): CookieManager
 	{
-		return new CookieManagerImpl(FrozenClock::fromString('2022-12-13 12:00:00'));
+		return new HttpCookieManager(FrozenClock::fromString('2022-12-13 12:00:00'));
 	}
 
 	/**

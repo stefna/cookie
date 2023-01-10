@@ -7,7 +7,7 @@ use Psr\Clock\ClockInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class CookieManagerImpl implements CookieManager
+final class HttpCookieManager implements CookieManager
 {
 	public function __construct(
 		private readonly ClockInterface $clock,

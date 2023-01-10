@@ -8,7 +8,7 @@ use Psr\Http\Message\ResponseInterface;
 use Stefna\Cookie\ArrayCookieJar;
 use Stefna\Cookie\Cookie;
 use Stefna\Cookie\CookieManager;
-use Stefna\Cookie\CookieManagerImpl;
+use Stefna\Cookie\HttpCookieManager;
 use Stefna\Cookie\SameSite;
 use Sunkan\Dictus\FrozenClock;
 
@@ -52,11 +52,9 @@ final class ManagerTest extends TestCase
 			$jar->set($cookie[0]);
 		}
 
-
 		$response = new ResponseStub(function ($name, $value, $count) use ($cookies) {
 			$this->assertSame('set-cookie', $name);
 			$this->assertSame($cookies[$count][1], $value);
-			var_dump($name, $value, $count);
 		});
 
 		$manager->compileCookieJar($jar, $response);
@@ -67,7 +65,7 @@ final class ManagerTest extends TestCase
 	 */
 	public function getManager(): CookieManager
 	{
-		return new CookieManagerImpl(FrozenClock::fromString('2022-12-13 12:00:00'));
+		return new HttpCookieManager(FrozenClock::fromString('2022-12-13 12:00:00'));
 	}
 
 	/**
