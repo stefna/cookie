@@ -5,7 +5,7 @@ namespace Stefna\Cookie;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class SignCookieManager implements CookieManager
+final class SignedCookieManager implements CookieManager
 {
 	public function __construct(
 		private readonly CookieManager $cookieManager,

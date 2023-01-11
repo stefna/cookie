@@ -7,10 +7,10 @@ use PHPUnit\Framework\TestCase;
 use Stefna\Cookie\Cookie;
 use Stefna\Cookie\CookieManager;
 use Stefna\Cookie\HttpCookieManager;
-use Stefna\Cookie\SignCookieManager;
+use Stefna\Cookie\SignedCookieManager;
 use Sunkan\Dictus\FrozenClock;
 
-final class SignCookieManagerTest extends TestCase
+final class SignedCookieManagerTest extends TestCase
 {
 	private string $key = 'test-key';
 	private string $cookieName = 'test-name';
@@ -70,7 +70,7 @@ final class SignCookieManagerTest extends TestCase
 
 	public function getManager(): CookieManager
 	{
-		return new SignCookieManager(
+		return new SignedCookieManager(
 			new HttpCookieManager(FrozenClock::fromString('2022-12-13 12:00:00')),
 			$this->key,
 		);
