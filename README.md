@@ -30,7 +30,7 @@ http layer it's just a container that stores cookies.
 It's then up to the `CookieMiddleware` and `CookieManager` to read and write
 the http headers.
 
-By seperating it like this it's easy to implement Signing or encryption of the
+By separating it like this it's easy to implement Signing or encryption of the
 cookies since it's not part of the code that uses the cookies.
 
 It also means you don't need the Response object when creating new cookies all
