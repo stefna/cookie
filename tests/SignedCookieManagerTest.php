@@ -15,6 +15,9 @@ final class SignedCookieManagerTest extends TestCase
 	private string $key = 'test-key';
 	private string $cookieName = 'test-name';
 
+	/**
+	 * @return array<string, array{string, string}>
+	 */
 	public function signDataProvider(): array
 	{
 		return [
