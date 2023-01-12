@@ -14,7 +14,8 @@
 		"php": "^8.2",
 		"psr/log": "^3.0",
 		"psr/http-message": "^1.0.1",
-		"psr/http-server-middleware": "^1.0.1"
+		"psr/http-server-middleware": "^1.0.1",
+		"stefna/collection": "stefna/ds-collection"
 	},
 	"autoload": {
 		"psr-4": {
