@@ -8,13 +8,14 @@ use Psr\Http\Message\StreamInterface;
 
 final class ResponseStub implements ResponseInterface
 {
-	/**
-	 * @var callable
-	 */
+	/** @var callable(string, string, int): void */
 	private $headerAssert;
 
 	private int $count = 0;
 
+	/**
+	 * @param callable(string, string, int): void $headerAssert
+	 */
 	public function __construct(
 		callable $headerAssert,
 	) {
