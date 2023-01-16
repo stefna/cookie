@@ -21,10 +21,10 @@ final class SignedCookieManagerTest extends TestCase
 	public function signDataProvider(): array
 	{
 		return [
-			'empty-value' => ['', '6466954f2faa59730dfd554bb7259ee95ef6b766e85107066c6679d54aeeb8e235eb94fa3eea521811e60089a35251bb6466954f2faa59730dfd554bb7259ee9'],
-			'string-value' => ['value', '6466954f2faa59730dfd554bb7259ee9cf3867414f896c99e77083e2ebccfbd1397ed0c0e8c242aff993ce458a539afc6466954f2faa59730dfd554bb7259ee9value'],
-			'number-value' => ['1234567890', '6466954f2faa59730dfd554bb7259ee9ff06d61e72f6b20f576b8a8a72044dd35a35a3f5413bb4b1c98cd2759ff8fe026466954f2faa59730dfd554bb7259ee91234567890'],
-			'json-value' => ['{"bool":true,"int":123}', '6466954f2faa59730dfd554bb7259ee9f76b84bbe6eb3ee5e82ff2bf0786f4cb8f0c781e10849194ed7ac47f3f3394816466954f2faa59730dfd554bb7259ee9%7B%22bool%22%3Atrue%2C%22int%22%3A123%7D'],
+			'empty-value' => ['', '7d5bfb5d63271103341c35f8dc0d055cbdfc7ce16243ce1755ab1ae2017722e2fb3a9e2762e00182e038a25d845f87327d5bfb5d63271103341c35f8dc0d055c'],
+			'string-value' => ['value', '7d5bfb5d63271103341c35f8dc0d055cb5a8d6cca96948de284ab0c5a232f78da9cd7a5c5a03ee3d890f03d5654b8e257d5bfb5d63271103341c35f8dc0d055cvalue'],
+			'number-value' => ['1234567890', '7d5bfb5d63271103341c35f8dc0d055c42af98d35c98a1d388b74704e6d1c41792f8d6c69ebb3afffa820411571732a87d5bfb5d63271103341c35f8dc0d055c1234567890'],
+			'json-value' => ['{"bool":true,"int":123}', '7d5bfb5d63271103341c35f8dc0d055cbdb8d73b4f3309662999ce02711a3adbca1b3069cc23b90340fc766faca6b0147d5bfb5d63271103341c35f8dc0d055c%7B%22bool%22%3Atrue%2C%22int%22%3A123%7D'],
 		];
 	}
 
@@ -67,7 +67,7 @@ final class SignedCookieManagerTest extends TestCase
 		$this->expectException(\RuntimeException::class);
 
 		$manager->getCookieJar((new ServerRequest('GET', '/'))->withCookieParams([
-			'test-name' => '6466954f2faa59730dfd554bb7259ee9cfb7259ee9value',
+			'test-name' => '7d5bfb5d63271103341c35f8dc0d055csdfvalue',
 		]));
 	}
 
