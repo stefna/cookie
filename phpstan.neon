@@ -1,0 +1,9 @@
+parameters:
+	level: max
+	paths:
+		- src
+	type_coverage:
+		return_type: 90
+		param_type: 100
+		property_type: 100
+		print_suggestions: true
