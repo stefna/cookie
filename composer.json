@@ -13,12 +13,15 @@
 	],
 	"require": {
 		"php": "^8.2",
+		"psr/clock": "^1.0",
 		"psr/log": "^3.0",
 		"psr/http-message": "^1.0.1",
 		"psr/http-server-middleware": "^1.0.1",
 		"stefna/ds-collection": "dev-main"
 	},
 	"require-dev": {
+		"sunkan/dictus": "^2.0",
+		"nyholm/psr7": "^1.0",
 		"squizlabs/php_codesniffer": "dev-master",
 		"stefna/codestyle": "^1.12",
 		"phpstan/phpstan": "^1.8",
