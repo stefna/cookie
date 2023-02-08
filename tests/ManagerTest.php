@@ -71,7 +71,7 @@ final class ManagerTest extends TestCase
 	/**
 	 * @return array<string, array<array<array{0:Cookie,1:string}>>>
 	 */
-	public function cookieProvider(): array
+	public static function cookieProvider(): array
 	{
 		return [
 			'cookie with default values' => [

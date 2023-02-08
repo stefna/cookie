@@ -7,7 +7,7 @@ use Stefna\Cookie\Cookie;
 use Stefna\Cookie\ReadCookie;
 use Stefna\Cookie\SameSite;
 
-abstract class AbstractCookieTest extends TestCase
+abstract class AbstractCookieTestCase extends TestCase
 {
 	abstract protected function createCookie(string $name, string $values): ReadCookie|Cookie;
 
@@ -40,7 +40,7 @@ abstract class AbstractCookieTest extends TestCase
 	/**
 	 * @return array<array{string}>
 	 */
-	public function invalidNameProvider(): array
+	public static function invalidNameProvider(): array
 	{
 		return [
 			['"'],
@@ -156,7 +156,7 @@ abstract class AbstractCookieTest extends TestCase
 	/**
 	 * @return array<string, array{string}>
 	 */
-	public function invalidPathProvider(): array
+	public static function invalidPathProvider(): array
 	{
 		return [
 			'path with comma' => ['/path,test'],

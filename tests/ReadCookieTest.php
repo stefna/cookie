@@ -7,7 +7,7 @@ use Stefna\Cookie\Cookie;
 use Stefna\Cookie\ReadCookie;
 use Stefna\Cookie\SameSite;
 
-final class ReadCookieTest extends AbstractCookieTest
+final class ReadCookieTest extends AbstractCookieTestCase
 {
 	protected function createCookie(string $name, string $values): ReadCookie|Cookie
 	{

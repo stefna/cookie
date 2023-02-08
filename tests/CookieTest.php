@@ -5,7 +5,7 @@ namespace Stefna\Cookie\Tests;
 use Stefna\Cookie\Cookie;
 use Stefna\Cookie\ReadCookie;
 
-final class CookieTest extends AbstractCookieTest
+final class CookieTest extends AbstractCookieTestCase
 {
 	public function testExpire(): void
 	{

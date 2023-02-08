@@ -18,7 +18,7 @@ final class SignedCookieManagerTest extends TestCase
 	/**
 	 * @return array<string, array{string, string}>
 	 */
-	public function signDataProvider(): array
+	public static function signDataProvider(): array
 	{
 		return [
 			'empty-value' => ['', '7d5bfb5d63271103341c35f8dc0d055cbdfc7ce16243ce1755ab1ae2017722e2fb3a9e2762e00182e038a25d845f87327d5bfb5d63271103341c35f8dc0d055c'],
