@@ -1,5 +1,10 @@
 # Cookies for psr-15 and psr-7
 
+[![Build Status](https://github.com/stefna/cookie/actions/workflows/continuous-integration.yml/badge.svg?branch=main)](https://github.com/stefna/cookie/actions/workflows/continuous-integration.yml)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/stefna/cookie.svg)](https://packagist.org/packages/stefna/cookie)
+[![Software License](https://img.shields.io/github/license/stefna/cookie.svg)](LICENSE)
+
+
 The package helps in working with HTTP cookies in a PSR-7/PSR-15 environment.
 
 ## Requirements
