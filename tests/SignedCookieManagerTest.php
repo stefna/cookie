@@ -3,6 +3,7 @@
 namespace Stefna\Cookie\Tests;
 
 use Nyholm\Psr7\ServerRequest;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Stefna\Cookie\Cookie;
 use Stefna\Cookie\CookieManager;
@@ -28,9 +29,7 @@ final class SignedCookieManagerTest extends TestCase
 		];
 	}
 
-	/**
-	 * @dataProvider signDataProvider
-	 */
+	#[DataProvider('signDataProvider')]
 	public function testSign(string $value, string $expected): void
 	{
 		$manager = $this->getManager();
